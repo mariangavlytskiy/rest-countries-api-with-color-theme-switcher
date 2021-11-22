@@ -8,12 +8,12 @@ import styles from "./Select.module.css";
 
 const REGIONS = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
 
-export default function Select({ selectClassName }) {
+export default function Select() {
   const [isOpen, setIsOpen] = useState(false);
   const { region, setRegion } = useContext(CountriesContext);
   const options = REGIONS;
   return (
-    <div className={classNames(styles.container, selectClassName)}>
+    <div className={styles.container}>
       <div className={styles.trigger} onClick={() => setIsOpen(!isOpen)}>
         {region ? region : "Filter By Region"}
         <FontAwesomeIcon icon={isOpen ? faChevronDown : faChevronUp} />

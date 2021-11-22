@@ -6,24 +6,3 @@
   left: 0;
   z-index: 999;
 }
-header {
-  font-size: 14px;
-  margin: 0 1rem;
-}
-
-header,
-header button {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header h1 {
-  font-size: 1.25em;
-}
-
-header button {
-  background-color: transparent;
-  border: none;
-  padding: 2rem 0;
-}

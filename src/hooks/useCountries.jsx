@@ -22,7 +22,18 @@ export const useCountries = () => {
         if (response.ok) {
           const data = await response.json();
           setLoadedCountries(data);
-          setCountries(data);
+          setCountries(
+            data.map((country) => {
+              const { name, capital, flags, population, region } = country;
+              return {
+                name: name.common,
+                flag: flags.svg,
+                population,
+                region,
+                capital: capital[0],
+              };
+            })
+          );
         }
       } catch (e) {
         setError(e);
@@ -48,19 +59,10 @@ export const useCountries = () => {
         )
       );
     }
-  }, [region, searchQuery]);
+  }, [region, searchQuery, setCountries]);
 
   return {
-    countries: countries.map((country) => {
-      const { name, capital, flags, population, region } = country;
-      return {
-        name: name.common,
-        flag: flags.svg,
-        population,
-        region,
-        capital: capital[0],
-      };
-    }),
+    countries,
     isLoading,
     error,
     region,
