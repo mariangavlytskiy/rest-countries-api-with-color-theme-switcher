@@ -1,0 +1,52 @@
+.container,
+.card {
+  display: flex;
+}
+
+.container {
+  font-size: 14px;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: var(--white);
+  box-shadow: 0px 0px 15px -2px #000000;
+  height: 360px;
+  width: 270px;
+}
+
+.info {
+  padding: 1em 2em 2em;
+  flex-basis: 50%;
+}
+
+.info h1 {
+  margin: 0 0 1em;
+  font-size: 1.5em;
+}
+
+.card img {
+  object-fit: cover;
+  height: 180px;
+  border-radius: 5px 5px 0 0;
+  flex-basis: 50%;
+}
+
+.stats {
+  list-style: none;
+}
+
+.stats span {
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 880px) {
+  .container {
+    justify-content: flex-start;
+  }
+}

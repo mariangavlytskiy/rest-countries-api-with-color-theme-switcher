@@ -1,0 +1,49 @@
+.container {
+  width: 100%;
+  height: 3rem;
+  background-color: var(--white);
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0.3rem var(--dark-gray);
+  min-width: 200px;
+}
+
+.trigger {
+  width: inherit;
+  height: inherit;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.optionsMenu {
+  display: none;
+  position: absolute;
+  top: 4rem;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 0.2rem;
+  box-shadow: 0 0 0.3rem var(--dark-gray);
+  padding: 1rem 0;
+}
+
+.optionsMenu button {
+  width: 100%;
+  padding: 0.5rem 2rem;
+  background-color: transparent;
+  border: none;
+  text-align: start;
+  cursor: pointer;
+}
+
+.optionsMenu button:hover {
+  background-color: var(--light-gray);
+}
+
+.optionsMenu div {
+  padding: 1rem 2rem;
+}
+
+.visible {
+  display: block;
+}
