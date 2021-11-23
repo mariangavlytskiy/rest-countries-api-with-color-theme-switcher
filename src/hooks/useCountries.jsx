@@ -2,8 +2,38 @@ import { useState, useEffect, useContext } from "react";
 import { CountriesContext } from "../contexts/CountriesContext";
 
 const BASE_URL =
-  "https://restcountries.com/v3.1/all?fields=name,flags,capital,population,region";
-
+  "https://restcountries.com/v3.1/all?fields=cca3,name,flags,capital,population,region,tld,currencies,languages,subregion,borders";
+export const transformData = (data) =>
+  data.map(
+    ({
+      name,
+      capital,
+      flags,
+      population,
+      region,
+      subregion,
+      tld,
+      currencies,
+      languages,
+      borders,
+      cca3,
+    }) => {
+      return {
+        name: name,
+        path: cca3,
+        flag: flags.svg,
+        population,
+        region,
+        subregion,
+        capital: capital[0],
+        tld,
+        currencies,
+        languages,
+        borders,
+        cca3,
+      };
+    }
+  );
 export const useCountries = () => {
   const [loadedCountries, setLoadedCountries] = useState();
   const { countries, setCountries, region, searchQuery } =
@@ -21,19 +51,9 @@ export const useCountries = () => {
         const response = await fetch(BASE_URL, { signal: ac.signal });
         if (response.ok) {
           const data = await response.json();
-          setLoadedCountries(data);
-          setCountries(
-            data.map((country) => {
-              const { name, capital, flags, population, region } = country;
-              return {
-                name: name.common,
-                flag: flags.svg,
-                population,
-                region,
-                capital: capital[0],
-              };
-            })
-          );
+          const transformedData = transformData(data);
+          setLoadedCountries(transformedData);
+          setCountries(transformedData);
         }
       } catch (e) {
         setError(e);

@@ -7,13 +7,11 @@ import Select from "./components/Select/Select";
 
 const Home = () => (
   <main>
-    <CountriesContextProvider>
-      <div className={styles.subHeader}>
-        <SearchInput />
-        <Select />
-      </div>
-      <CountriesList />
-    </CountriesContextProvider>
+    <div className={styles.subHeader}>
+      <SearchInput />
+      <Select />
+    </div>
+    <CountriesList />
   </main>
 );
 

@@ -3,6 +3,10 @@ import React, { useState } from "react";
 export const CountriesContext = React.createContext({
   countries: [],
   setCountries: () => {},
+  searchQuery: "",
+  setSearchQuery: () => {},
+  region: null,
+  setRegion: () => {},
 });
 
 export const CountriesContextProvider = ({ children }) => {

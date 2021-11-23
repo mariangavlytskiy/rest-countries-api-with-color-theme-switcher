@@ -6,8 +6,8 @@ import { CountriesContext } from "../../../../contexts/CountriesContext";
 import styles from "./SearchInput.module.css";
 
 export default function SearchInput({ selectClassName }) {
-  const { searchQuery, setSearchQuery } = useContext(CountriesContext);
   const [isFocused, setIsFocused] = useState(false);
+  const { searchQuery, setSearchQuery } = useContext(CountriesContext);
   return (
     <div className={styles.container}>
       <input

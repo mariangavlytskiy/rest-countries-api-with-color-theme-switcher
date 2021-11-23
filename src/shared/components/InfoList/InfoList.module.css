@@ -1,0 +1,7 @@
+.infoList {
+  list-style: none;
+}
+
+.infoList span {
+  font-weight: 600;
+}
