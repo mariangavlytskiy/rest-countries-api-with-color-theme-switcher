@@ -45,7 +45,7 @@ code {
 
 header {
   font-size: 14px;
-  margin: 0 168px;
+  margin: 0 1rem;
 }
 
 header,
@@ -66,5 +66,14 @@ header button {
 }
 
 main {
-  margin: 116px 168px;
+  margin: 116px 1rem;
+}
+
+@media only screen and (min-width: 880px) {
+  header {
+    margin: 0 168px;
+  }
+  main {
+    margin: 116px 168px;
+  }
 }

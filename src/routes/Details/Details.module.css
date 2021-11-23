@@ -1,0 +1,81 @@
+.backButton,
+.bordersList ul button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: none;
+  box-shadow: 0 0 0.3rem var(--dark-gray);
+  background-color: var(--white);
+  border-radius: 2px;
+  min-width: 6rem;
+  min-height: 2.5rem;
+  cursor: pointer;
+}
+
+.backButton {
+  margin: 3rem 0;
+  padding: 0.5rem 1rem;
+}
+
+article {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 14px;
+}
+
+article div h1 {
+  margin: 2rem 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.statsContainer {
+  display: flex;
+  flex-flow: row wrap;
+  line-height: 2rem;
+  flex-basis: 48%;
+  gap: 3rem;
+}
+.bordersList {
+  margin: 2rem 0 0 0;
+}
+
+.bordersList,
+.bordersList ul {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bordersList ul {
+  list-style: none;
+}
+
+.bordersList ul li button {
+  padding: 0.5rem 1rem;
+}
+
+@media only screen and (min-width: 880px) {
+  article {
+    justify-content: space-between;
+  }
+
+  article div {
+    flex-basis: 47%;
+  }
+
+  .statsContainer {
+    gap: 5rem;
+  }
+
+  .bordersList {
+    margin: 5rem 0 0;
+  }
+}
