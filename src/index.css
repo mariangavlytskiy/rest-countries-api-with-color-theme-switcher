@@ -20,9 +20,42 @@
   /*(Dark Mode Text & Light Mode Elements)*/
   --white: hsl(0, 0%, 100%);
 
+  --header-height: 71px;
+
   --bg-color: var(--light-gray);
   --text-color: var(--dark-blue-200);
+
+  --card-bg-color: var(--white);
+
+  --header-bg-color: var(--white);
+
+  --input-bg-color: var(--white);
   --input-text-color: var(--dark-gray);
+
+  --button-bg-color: var(--white);
+
+  --select-bg-color: var(--white);
+  --select-menu-bg-color: var(--white);
+
+  --default-box-shadow: 0 0 0.3rem var(--dark-gray);
+  --default-margin-x: 168px;
+}
+
+:root[data-theme="dark"] {
+  --bg-color: var(--dark-blue-207);
+
+  --header-bg-color: var(--dark-blue-209);
+  --card-bg-color: var(--dark-blue-209);
+  --text-color: var(--white);
+
+  --input-bg-color: var(--dark-blue-209);
+  --input-text-color: var(--white);
+  --default-box-shadow: none;
+
+  --button-bg-color: var(--dark-blue-209);
+
+  --select-bg-color: var(--dark-blue-209);
+  --select-menu-bg-color: var(--dark-blue-209);
 }
 
 html {
@@ -36,6 +69,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 code {
@@ -60,20 +94,29 @@ header h1 {
 }
 
 header button {
-  background-color: transparent;
-  border: none;
   padding: 2rem 0;
 }
 
+button {
+  border: none;
+  background-color: var(--button-bg-color);
+  color: var(--text-color);
+}
+
 main {
-  margin: 116px 1rem;
+  margin: calc(var(--header-height) + 45px) 1rem;
+}
+
+input {
+  background-color: var(--input-bg-color);
+  color: var(--input-text-color);
 }
 
 @media only screen and (min-width: 880px) {
   header {
-    margin: 0 168px;
+    margin: 0 var(--margin-x);
   }
   main {
-    margin: 116px 168px;
+    margin: calc(var(--header-height) + 45px) var(--margin-x);
   }
 }

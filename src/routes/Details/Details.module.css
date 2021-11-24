@@ -4,8 +4,7 @@
   justify-content: space-around;
   align-items: center;
   border: none;
-  box-shadow: 0 0 0.3rem var(--dark-gray);
-  background-color: var(--white);
+  box-shadow: var(--default-box-shadow);
   border-radius: 2px;
   min-width: 6rem;
   min-height: 2.5rem;

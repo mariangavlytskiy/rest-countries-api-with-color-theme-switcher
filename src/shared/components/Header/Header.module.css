@@ -1,6 +1,7 @@
 .headerWrapper {
   width: 100%;
-  background-color: var(--white);
+  background-color: var(--header-bg-color);
+  height: var(--header-height);
   position: fixed;
   top: 0;
   left: 0;
