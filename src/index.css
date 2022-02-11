@@ -38,7 +38,9 @@
   --select-menu-bg-color: var(--white);
 
   --default-box-shadow: 0 0 0.3rem var(--dark-gray);
-  --default-margin-x: 168px;
+
+  --main-margin-x: 168px;
+  --header-margin-x: 168px;
 }
 
 :root[data-theme="dark"] {
@@ -114,9 +116,9 @@ input {
 
 @media only screen and (min-width: 880px) {
   header {
-    margin: 0 var(--margin-x);
+    margin: 0 var(--header-margin-x);
   }
   main {
-    margin: calc(var(--header-height) + 45px) var(--margin-x);
+    margin: calc(var(--header-height) + 45px) var(--main-margin-x);
   }
 }

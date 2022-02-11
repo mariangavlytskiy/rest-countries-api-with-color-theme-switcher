@@ -1,17 +1,18 @@
+import React, { useContext, useState } from "react";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useContext, useState } from "react";
+import classNames from "classnames";
+
 import { CountriesContext } from "../../../../contexts/CountriesContext";
 
-import classNames from "classnames";
 import styles from "./Select.module.css";
 
-const REGIONS = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
+const REGIONS_ARRAY = ["Africa", "Americas", "Asia", "Europe", "Oceania"];
 
 export default function Select() {
   const [isOpen, setIsOpen] = useState(false);
   const { region, setRegion } = useContext(CountriesContext);
-  const options = REGIONS;
+  const options = REGIONS_ARRAY;
   return (
     <div className={styles.container}>
       <div className={styles.trigger} onClick={() => setIsOpen(!isOpen)}>

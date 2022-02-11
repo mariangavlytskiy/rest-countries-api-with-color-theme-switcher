@@ -1,13 +1,14 @@
-import "./App.css";
-import Header from "./shared/components/Header/Header";
-import Home from "./routes/Home/Home";
-import Details from "./routes/Details/Details";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Header from "./shared/components/Header";
+import Home from "./routes/Home";
+import Details from "./routes/Details/Details";
+
 import { CountriesContextProvider } from "./contexts/CountriesContext";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <BrowserRouter>
         <Header />
         <CountriesContextProvider>
@@ -16,6 +17,7 @@ function App() {
               <Route path="" element={<Home />} />
               <Route path=":countryName" element={<Details />} />
             </Route>
+
             <Route
               path="*"
               element={
