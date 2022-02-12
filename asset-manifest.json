@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/rest-countries-api-with-color-theme-switcher/static/css/main.e50046b2.chunk.css",
-    "main.js": "/rest-countries-api-with-color-theme-switcher/static/js/main.ef5f1c12.chunk.js",
-    "main.js.map": "/rest-countries-api-with-color-theme-switcher/static/js/main.ef5f1c12.chunk.js.map",
+    "main.js": "/rest-countries-api-with-color-theme-switcher/static/js/main.ad438c99.chunk.js",
+    "main.js.map": "/rest-countries-api-with-color-theme-switcher/static/js/main.ad438c99.chunk.js.map",
     "runtime-main.js": "/rest-countries-api-with-color-theme-switcher/static/js/runtime-main.45e7b4ff.js",
     "runtime-main.js.map": "/rest-countries-api-with-color-theme-switcher/static/js/runtime-main.45e7b4ff.js.map",
     "static/js/2.f66647df.chunk.js": "/rest-countries-api-with-color-theme-switcher/static/js/2.f66647df.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.45e7b4ff.js",
     "static/js/2.f66647df.chunk.js",
     "static/css/main.e50046b2.chunk.css",
-    "static/js/main.ef5f1c12.chunk.js"
+    "static/js/main.ad438c99.chunk.js"
   ]
 }
